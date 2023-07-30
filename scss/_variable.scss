@@ -35,6 +35,7 @@ $theme-colors: (
   "info": $info,
   "light":    $light,
   "warning":    $warning,
+  "success":   $success,
 ) !default;
 
 
@@ -66,6 +67,32 @@ $container-max-widths: (
 ) !default;
 // scss-docs-end container-max-widths
 
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+// scss-docs-end spacer-variables-maps
+
+// scss-docs-start border-variables
+$border-width:                1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+) !default;
+
+$border-style:                solid !default;
+$border-color:                $gray-300 !default;
+$border-color-translucent:    rgba($black, .175) !default;
+// scss-docs-end border-variables
 
 
 
@@ -182,6 +209,16 @@ $btn-close-opacity:          1 !default;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $border-radius-lg !default;
 
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+$btn-hover-bg-shade-amount:       15% !default;
+$btn-hover-bg-tint-amount:        15% !default;
+$btn-hover-border-shade-amount:   20% !default;
+$btn-hover-border-tint-amount:    10% !default;
+$btn-active-bg-shade-amount:      20% !default;
+$btn-active-bg-tint-amount:       20% !default;
+$btn-active-border-shade-amount:  25% !default;
+$btn-active-border-tint-amount:   10% !default;
 
 // scss-docs-end btn-variables
 
@@ -238,3 +275,20 @@ $accordion-border-radius:           $border-radius-sm;
 $accordion-button-icon:             url("../../assets/images/faq/plus.svg");
 $accordion-button-active-icon:      url("../../assets/images/faq/minus.svg");
 $accordion-icon-width:               20px;
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+// scss-docs-start alert-variables
+$alert-padding-y:               $spacer !default;
+$alert-padding-x:               $spacer !default;
+$alert-margin-bottom:           1rem !default;
+$alert-border-radius:           $border-radius !default;
+$alert-link-font-weight:        $font-weight-bold !default;
+$alert-border-width:            $border-width !default;
+$alert-bg-scale:                -80% !default;
+$alert-border-scale:            -70% !default;
+$alert-color-scale:             40% !default;
+$alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
+// scss-docs-end alert-variables
