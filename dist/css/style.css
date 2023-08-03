@@ -10869,8 +10869,12 @@ textarea.form-control-lg {
   top: 3px;
 }
 .our-service ul li span {
-  width: 90%;
+  width: 100%;
   font-weight: 600;
+}
+
+.desc {
+  text-align: justify;
 }
 
 .service {
